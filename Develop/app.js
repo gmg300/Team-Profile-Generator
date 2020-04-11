@@ -11,7 +11,7 @@ class Team {
     this.interns = [];
   }
 
-  async addEmployees() {
+  async addEmployees() { // Prompt User to input employee info and push to object or arrays
     try {
       // Get employee data
       let employee = await inquirer.prompt([
@@ -119,7 +119,19 @@ class Team {
         console.error("Whoops!");
     }
   }
+
+  async generateEmployeeCards() { // Create class for each employee and generate profile card
+
+  }
+
+  async generateHTML() {
+      
+  }
+
+
 }
+
+
 
 function init() {
   const team = new Team();
