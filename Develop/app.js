@@ -1,9 +1,16 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const chalk = require("chalk");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const generateHTML = require("./templates/generateHTML");
 
+function writeToFile(fileName, data) {
+  const path = "./output/" + fileName;
+  fs.writeFileSync(path, data);
+  console.log(chalk.green("Created file 'README.md'"));
+}
 class Team {
   constructor() {
     this.manager = {};
@@ -11,7 +18,8 @@ class Team {
     this.interns = [];
   }
 
-  async addEmployees() { // Prompt User to input employee info and push to object or arrays
+  async addEmployees() {
+    // Prompt User to input employee info and push to object or arrays
     try {
       // Get employee data
       let employee = await inquirer.prompt([
@@ -94,13 +102,32 @@ class Team {
       // Push data to appropriate const
       switch (employee.title) {
         case "Manager":
-          this.manager = employee;
+          this.manager = new Manager(
+            employee.name,
+            employee.id,
+            employee.email,
+            employee.officeNumber
+          ).renderProfile();
           break;
         case "Engineer":
-          this.engineers.push(employee);
+          this.engineers.push(
+            new Engineer(
+              employee.name,
+              employee.id,
+              employee.email,
+              employee.github
+            ).renderProfile()
+          );
           break;
         case "Intern":
-          this.interns.push(employee);
+          this.interns.push(
+            new Intern(
+              employee.name,
+              employee.id,
+              employee.email,
+              employee.school
+            ).renderProfile()
+          );
           break;
       }
       // Loop if user wants to add more employees
@@ -112,30 +139,24 @@ class Team {
       if(ask.again) {
         this.addEmployees();
       } else {
-        console.log(this);
+        const data = generateHTML(this.manager, this.engineers.join(''), this.interns.join(''));
+        writeToFile("team.html", data);
         return;
       }
-    } catch(err) {
-        console.error("Whoops!");
+    } catch (err) {
+      console.error("Whoops!");
     }
   }
 
-  async generateEmployeeCards() { // Create class for each employee and generate profile card
-
+  async generateEmployeeCards() {
+    // Create class for each employee and generate profile card
   }
-
-  async generateHTML() {
-      
-  }
-
-
 }
 
-
-
-function init() {
+async function init() {
   const team = new Team();
   team.addEmployees();
+  //  console.log(team);
 }
 
 init();

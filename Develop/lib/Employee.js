@@ -21,10 +21,6 @@ class Employee {
     getRole() {
         return this.title;
     }
-
-    renderProfile() {
-        
-    }
 }
 
 module.exports = Employee;
