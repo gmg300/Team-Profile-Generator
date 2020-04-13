@@ -11,30 +11,31 @@ function generateHTML(manager, engineers, interns) {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
         <link rel="stylesheet" href="../../Assets/css/style.css">
-        <title>My Team</title>
+        <title>Meet the Team</title>
     </head>
     
     <body>
         <!-- HEADER -->
         <header>
-            <div class="container-fluid bg-danger">
-                <h1 class="text-center text-light display-4 py-4">My Team</h1>
+            <div class="container-fluid">
+                <h1 class="display-4 mr-4 pt-4 pb-1 text-styling border-bottom">Meet the Team</h1>
             </div>
         </header>
         <main class="container">
-            <!-- CARDS VIEW -->
-            <div id="cards-view" class="row justify-content-center">
-                <div class="card-deck justify-content-center">
+            <section class="my-5">
+                <div class="row justify-content-center">
+                    <!-- CARDS GO HERE -->
                     ${manager}
                     ${engineers}
                     ${interns}
+                <!-- END CARDS VIEW -->
                 </div>
-            </div>
+            </section>
         </main>
         <!-- FOOTER -->
         <footer class="page-footer">
-            <div class="container-fluid bg-danger mt-2">
-                <p class="text-center text-light mb-0 py-3">© 2020</p>
+            <div class="container-fluid bg-cyan mt-2">
+                <p class="text-center text-light mb-0 py-3">©2020 Garrett Gassensmith</p>
             </div>
         </footer>
         <!-- SCRIPT LINKS -->
