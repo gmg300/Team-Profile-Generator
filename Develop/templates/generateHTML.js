@@ -23,7 +23,7 @@ function generateHTML(manager, engineers, interns) {
         </header>
         <main class="container">
             <!-- CARDS VIEW -->
-            <div id="cards-view" class="row">
+            <div id="cards-view" class="row justify-content-center">
                 <div class="card-deck justify-content-center">
                     ${manager}
                     ${engineers}

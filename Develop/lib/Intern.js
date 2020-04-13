@@ -19,9 +19,9 @@ class Intern extends Employee {
                     </div>
                     <div class="card-body text-dark bg-light">
                          <ul class="list-group">
-                            <li class="list-group-item">ID: ${this.id}</li>
-                            <li class="list-group-item">Email: ${this.email}</li>
-                            <li class="list-group-item">School: ${this.school}</li>
+                            <li class="list-group-item"><strong>ID:</strong> ${this.id}</li>
+                            <li class="list-group-item"><strong>Email:</strong> ${this.email}</li>
+                            <li class="list-group-item"><strong>School:</strong> ${this.school}</li>
                         </ul>
                     </div>
                 </div>`;
