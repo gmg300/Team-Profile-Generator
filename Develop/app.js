@@ -31,6 +31,7 @@ const questions = [
     type: "input",
     name: "email",
     message: "Email:",
+    // Email validation - https://www.npmjs.com/package/email-validator
     validate: function (input) {
       let valid = validator.validate(input);
       return valid || "Please enter a email(key up then down to clear)";
@@ -49,6 +50,7 @@ const questions = [
     type: "number",
     name: "officeNumber",
     message: "Office Number:",
+    // Number validation - https://github.com/sameeri/Code-Inquirer/wiki/Asking-questions-away-with-Inquirer!
     validate: function(input) {
       var valid = !isNaN(parseFloat(input));
       return valid || "Please enter a number(key up then down to clear)";
@@ -89,8 +91,6 @@ const questions = [
     },
   },
 ];
-
-// VALIDATION
 
 class Team {
   constructor() {
@@ -169,7 +169,6 @@ function init() {
   console.log(chalk.blue("Enter your team info below:"));
   const team = new Team();
   team.addEmployees();
-  //  console.log(team);
 }
 
 init();
