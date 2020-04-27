@@ -23,9 +23,12 @@
   ```
   
   ## Usage
-  Navigate to the "Develop" folder in your preferred command line interface and run the following code:
+  Navigate to the "Develop" folder in your preferred command line interface and run one of the following lines of code:
   ```sh 
   node app.js 
+  ``` 
+  ```sh 
+  npm start
   ``` 
   From there follow the prompts and the app will generate an HTML file automatically using the information you provided.
 

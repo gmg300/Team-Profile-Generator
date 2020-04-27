@@ -16,7 +16,7 @@ class Engineer extends Employee {
                     <div class="card-wrapper mb-3 hvr-grow">
                         <div class="card custom-shadow">
                             <!-- Photo credit - https://burst.shopify.com/photos/developer-coding-in-php?q=php -->
-                            <img class="card-img-top" src="../../Assets/images/Engineer-color.jpg" alt="Engineer card image">
+                            <img class="card-img-top" src="../Develop/templates/images/Engineer-color.jpg" alt="Engineer card image">
                             <div class="over-img text-center">
                                 <h2 class="font-weight-bold">${this.name}</h2>
                                 <h3 class="font-weight-bold"><i class="fas fa-code"></i> ${this.title}</h3>

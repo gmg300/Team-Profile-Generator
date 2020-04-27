@@ -16,7 +16,7 @@ class Intern extends Employee {
                     <div class="card-wrapper mb-3 hvr-grow">
                         <div class="card custom-shadow">
                             <!-- Photo credit - https://burst.shopify.com/photos/student-holding-out-diploma-by-wall?q=graduate -->
-                            <img class="card-img-top" src="../../Assets/images/${this.title}-color.jpg" alt="${this.title} card image">
+                            <img class="card-img-top" src="../Develop/templates/images/${this.title}-color.jpg" alt="${this.title} card image">
                             <div class="over-img text-center">
                                 <h2 class="font-weight-bold">${this.name}</h2>
                                 <h3 class="font-weight-bold"><i class="fas fa-user-graduate"></i> ${this.title}</h3>

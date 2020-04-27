@@ -1,4 +1,4 @@
-function generateHTML(manager, engineers, interns) {
+function generateHTML(team) {
     return `<!doctype html>
     <html lang="en">
     
@@ -10,7 +10,7 @@ function generateHTML(manager, engineers, interns) {
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-        <link rel="stylesheet" href="../../Assets/css/style.css">
+        <link rel="stylesheet" href="../Develop/templates/css/style.css">
         <title>Meet the Team</title>
     </head>
     
@@ -25,9 +25,7 @@ function generateHTML(manager, engineers, interns) {
             <section class="my-5">
                 <div class="row justify-content-center">
                     <!-- CARDS GO HERE -->
-                    ${manager}
-                    ${engineers}
-                    ${interns}
+                    ${team}
                 <!-- END CARDS VIEW -->
                 </div>
             </section>
